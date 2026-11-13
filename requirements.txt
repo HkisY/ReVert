@@ -1,0 +1,21 @@
+# core (CPU: audit logic, metrics, tests)
+numpy>=1.24
+pillow>=10.0
+opencv-python-headless>=4.8
+pytest>=7.0
+
+# detectors (GPU)
+torch>=2.3
+transformers>=4.57      # zero-shot Qwen2.5-VL (the detectors use the pinned versions in environment/)
+accelerate>=0.33
+# flash-attn            # optional, pass --attn flash_attention_2
+bitsandbytes>=0.43      # --nf4 / --load-in-4bit on 24 GB cards
+
+# data generation (GPU)
+diffusers>=0.35         # SDXL inpainting, FLUX.1-Fill, Kandinsky 2.2
+pycocotools>=2.0
+sentencepiece
+protobuf
+
+# calibration probe / grounding
+scikit-learn>=1.3

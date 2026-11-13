@@ -1,0 +1,25 @@
+{
+  "_comment": "Thresholds of the decision gates and stop rules used by `python -m revert_audit.cli pilot` (see revert_audit/gates.py). The values below are the ones used for every run in the paper.",
+  "steps": [
+    50,
+    150,
+    300
+  ],
+  "min_n": 30,
+  "max_parse_fail": 0.1,
+  "detect_auc_pass": 0.65,
+  "detect_auc_fail": 0.55,
+  "detect_min_n_for_fail": 100,
+  "protocol_min_gap": 0.1,
+  "dr_finding": 0.3,
+  "dr_finding_lo": 0.15,
+  "per_finding": 0.2,
+  "per_finding_lo": 0.1,
+  "cng_ratio_finding": 0.7,
+  "cng_ratio_faithful": 0.9,
+  "dr_faithful_max": 0.15,
+  "per_faithful_max": 0.1,
+  "detect_min_n_for_pass": 30,
+  "min_flag_n": 20,
+  "min_flag_rate": 0.2
+}
