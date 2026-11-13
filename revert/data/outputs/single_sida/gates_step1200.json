@@ -1,0 +1,37 @@
+{
+ "base": "fake",
+ "n": 462,
+ "faithfulness_ratio": 0.26230383822971054,
+ "flag_rate": 0.4025,
+ "flag_rate_hi": 0.4305156573995388,
+ "gates": {
+  "G0": {
+   "status": "PASS",
+   "evidence": "解析失败率 0.0%，可审计样本 n=462（底图 fake）"
+  },
+  "G1": {
+   "status": "PASS",
+   "evidence": "AUC=0.749 ≥ 0.65（n_real=1200）"
+  },
+  "G2": {
+   "status": "PASS",
+   "evidence": "oracle CNG 0.576 [0.546,0.604] 明显高于 random -0.010 [-0.025,0.003]"
+  },
+  "G3": {
+   "status": "PASS",
+   "evidence": "忠实度比例 R=26%（模型 CNG 0.144，oracle 0.576，random -0.010）：拿掉它指的区域，效果只有拿掉真实篡改区的 26%；幽灵证据率 PER=0.56 [0.51,0.60]：已换成真像素的区域仍被指为伪影"
+  }
+ },
+ "decision": "GO",
+ "action": [
+  "继续：发现成立",
+  "这个检测器的解释存在可测量的不忠实。按计划扩大样本量、加入更多检测器。"
+ ],
+ "step_n": 1200,
+ "config_hash": "83978640611c",
+ "budget": {
+  "used_h": 5.218045000000079,
+  "next_n": null,
+  "next_h": 0.0
+ }
+}

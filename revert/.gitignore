@@ -1,0 +1,43 @@
+# weights / checkpoints
+*.pt
+*.pth
+*.bin
+*.safetensors
+*.ckpt
+*.onnx
+checkpoints/
+weights/
+models/
+# data not released (regenerate from data/manifest)
+coco/
+images/
+generated/
+regen/
+/runs/
+/outputs/
+/figures/
+work/
+cache/
+review_sheets/
+*.png
+*.jpg
+*.jpeg
+!docs/**/*.png
+# python / tools
+__pycache__/
+*.pyc
+.pytest_cache/
+.ipynb_checkpoints/
+.venv/
+env/
+wandb/
+logs/
+*.log
+.DS_Store
+.idea/
+.vscode/
+reproduced_numbers.json
+supp_numbers.json
+# local config and secrets
+configs/paths.sh
+.env

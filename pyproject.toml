@@ -1,0 +1,16 @@
+[project]
+name = "revert-audit"
+version = "1.0.0"
+description = "Causal faithfulness audit of forensic MLLM explanations via pixel-exact reversion"
+requires-python = ">=3.10"
+dependencies = ["numpy", "pillow", "opencv-python-headless"]
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["revert_audit*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

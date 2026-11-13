@@ -1,0 +1,37 @@
+{
+ "base": "fake",
+ "n": 2,
+ "faithfulness_ratio": NaN,
+ "flag_rate": 0.15,
+ "flag_rate_hi": 0.36042329588695743,
+ "gates": {
+  "G0": {
+   "status": "INCONCLUSIVE",
+   "evidence": "可审计样本 n=2 < 30（模型判为“假”且给出区域的样本太少）"
+  },
+  "G1": {
+   "status": "INCONCLUSIVE",
+   "evidence": "AUC=0.741，n_real=20"
+  },
+  "G2": {
+   "status": "INCONCLUSIVE",
+   "evidence": "oracle 0.581 vs random 0.216，但只有 n=2 个可审计样本（< 30）"
+  },
+  "G3": {
+   "status": "INCONCLUSIVE",
+   "evidence": "忠实度比例 R=n/a，DR nan（n=0），PER 0.50"
+  }
+ },
+ "decision": "UNDECIDED",
+ "action": [
+  "到上限仍未定",
+  "已经跑到最大样本量还是判断不了。停下来，把报告发给我一起看，不要盲目加大投入。"
+ ],
+ "step_n": 20,
+ "config_hash": "83978640611c",
+ "budget": {
+  "used_h": 0.5244927777777778,
+  "next_n": null,
+  "next_h": 0.0
+ }
+}

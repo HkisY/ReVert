@@ -1,0 +1,37 @@
+{
+ "base": "fake",
+ "n": 184,
+ "faithfulness_ratio": 0.6664449865111096,
+ "flag_rate": 0.15333333333333332,
+ "flag_rate_hi": 0.1748234477714883,
+ "gates": {
+  "G0": {
+   "status": "PASS",
+   "evidence": "解析失败率 0.0%，可审计样本 n=184（底图 fake）"
+  },
+  "G1": {
+   "status": "PASS",
+   "evidence": "AUC=0.741 ≥ 0.65（n_real=1200）"
+  },
+  "G2": {
+   "status": "PASS",
+   "evidence": "oracle CNG 0.467 [0.421,0.515] 明显高于 random -0.014 [-0.034,0.007]"
+  },
+  "G3": {
+   "status": "PASS",
+   "evidence": "忠实度比例 R=67%（模型 CNG 0.307，oracle 0.467，random -0.014）：拿掉它指的区域，效果只有拿掉真实篡改区的 67%；幽灵证据率 PER=0.26 [0.20,0.33]：已换成真像素的区域仍被指为伪影"
+  }
+ },
+ "decision": "NO_FLAGS",
+ "action": [
+  "检测器几乎从不判假",
+  "它对假图几乎全部回答“真”，所以给不出可审计的证据区域（审计的对象是“判假并指出区域”的解释）。不要继续加样本：换成专门训练过的鉴伪 MLLM（如 SIDA）。若 AUC 不低，说明它的分数里有信号，只是阈值偏向“真”，可以记录为一个现象。"
+ ],
+ "step_n": 1200,
+ "config_hash": "eafeb0be755d",
+ "budget": {
+  "used_h": 45.96516750000003,
+  "next_n": null,
+  "next_h": 0.0
+ }
+}
